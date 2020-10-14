@@ -10,10 +10,6 @@ const routes: Routes = [
   },
 
   {
-    path: 'filtro',
-    loadChildren: () => import('../filtro/filtro.module').then( m => m.FiltroPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('../login/login.module').then( m => m.LoginPageModule)
   }
