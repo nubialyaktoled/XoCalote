@@ -5,16 +5,76 @@
 			<strong>XôCalote</strong>
 		</ion-title>
 		<br/>
-		
+		 <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
 		</ion-toolbar>
 </ion-header>
 
 <ion-content>
   <br/><br/><br/><br/>
+  
 <div class="ion-text-center">
-  Kaique Mauque, deve desde tal dia, pediu emprestado
-
-<br/><br/><br/><br/>
-  <ion-button routerLink="cadastrodevedores">Gerar relatório da dívida</ion-button>
+ <strong>Nome:</strong> Kaique Mauque <br/>
+ <strong>Telefone:</strong> 1123221222122<br/>
+ <strong>Valor da dívida:</strong> R$230,00<br/>
+ <strong>Motivo da dívida:</strong> pediu emprestado o valor<br/>
 </div>
+
+
+
 </ion-content>
+
+<ion-content padding>
+	<div class="ion-text-center">
+	<strong>Histórico de desculpas</strong>
+	<ion-grid>
+	  <ion-row>
+		<ion-col>Desculpa</ion-col>
+		<ion-col>Nova data prometida para o pagamento</ion-col>
+	  </ion-row>
+	 
+		<ion-row>
+		  <ion-col>Meu salário atrasou</ion-col>
+		  <ion-col>10/07/2019</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col>Meu salário teve muitos descontos esse mês</ion-col>
+			<ion-col>10/12/2019</ion-col>
+		  </ion-row>
+
+		<ion-row>
+			<ion-col>Minha mãe faleceu</ion-col>
+			<ion-col>15/02/2020</ion-col>
+		  </ion-row>
+
+		<ion-row>
+			<ion-col>Tive que pagar uma outra dívida</ion-col>
+			<ion-col>15/10/2019</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col>Minha mãe está doente</ion-col>
+			<ion-col>20/07/2020</ion-col>
+		  </ion-row> 
+
+		  <ion-row>
+			<ion-col>Meu carro quebrou e tive que gastar muito dinheiro</ion-col>
+			<ion-col>20/04/2020</ion-col>
+		  </ion-row>
+		  	 
+	</ion-grid>
+
+	<br/><br/>
+<strong>A desculpa de Caique está desatualizada, </strong> <ion-button routerLink="/cadastrodevedores">Cadastrar nova desculpa</ion-button> 
+
+	<br/><br/><br/><br/>
+  <ion-button routerLink="cadastrodevedores">Gerar relatório da dívida</ion-button>
+
+</div>
+<br/><br/><br/><br/>
+</ion-content>
+
+
+  

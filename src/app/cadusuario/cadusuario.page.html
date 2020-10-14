@@ -4,7 +4,10 @@
 		<ion-title>
 			<strong>XôCalote</strong>
 		</ion-title>
-		<br/>
+    <br/>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
 			</ion-toolbar>
 </ion-header>
 
@@ -24,16 +27,16 @@
       </ion-item>
 
       <ion-item>
-        <strong><ion-label position="floating">Email:</ion-label></strong>
+        <strong><ion-label position="floating" >Email:</ion-label></strong>
         <ion-input></ion-input>
       </ion-item>
 
       <ion-item>
-        <strong><ion-label position="floating">Senha</ion-label></strong>
-        <ion-input></ion-input>
+        <strong><ion-label position="floating" type="password">Senha:</ion-label></strong>
+        <ion-input type="password"></ion-input>
       </ion-item>
 
-      
+     
     </div>
 
     <div class="ion-text-center">
