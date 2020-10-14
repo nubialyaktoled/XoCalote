@@ -1,0 +1,62 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<br/>
+		<ion-title>
+			<strong>XôCalote</strong>
+		</ion-title>
+		<br/>
+		<ion-avatar slot="end">
+			<img src="https://randomuser.me/api/portraits/men/72.jpg"></ion-avatar>
+		</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-text color="secundary">
+    <div class="ion-text-center">
+      <h1>Meus devedores</h1>
+
+<br/><br/>
+   
+    <select name="Devedores" id="dev" color="primary">
+        <option value="">Selecione</option>
+        <option value="">Caique</option>
+      </select>
+    <br/><br/>
+
+      <ion-button routerLink="dados">consultar</ion-button>
+  
+<br/><br/>
+
+      
+   <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-badge>1</ion-badge>
+    <ion-fab-button>
+    <ion-icon name="notifications" routerLink="lembretes"></ion-icon>
+  </ion-fab-button>
+   </ion-fab>
+
+   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-badge>2</ion-badge>
+    <ion-fab-button>
+    <ion-icon name="alert-circle-outline" routerLink="info"></ion-icon>
+  </ion-fab-button>
+   </ion-fab>
+
+
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+          <ion-icon name="add" routerLink="cadastrodevedores"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    
+    <br/><br/><br/>
+    </div>
+ </ion-text>
+
+ 
+
+
+</ion-content>
+
+
