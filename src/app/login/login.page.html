@@ -12,33 +12,26 @@
 </ion-header>
 
 <ion-content>
-  <br/>  <br/> <br/> <br/>
-<div class="ion-text-center" style="background-image:url(https://image.freepik.com/fotos-gratis/mulher-de-negocios-com-longos-cabelos-castanhos-em-roupas-casuais-segurando-muitas-notas-sobre-o-branco_231208-6417.jpg)">
-  <br/>
-  <h1>Faça seu login</h1>
- 
- <!-- <br/><br/>
-  <ion-item>
-    <ion-label position="floating">Digite o seu email</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
   <br/>
 
-  <ion-item>
-    <ion-label position="floating">Digite sua senha</ion-label>
-    <ion-input></ion-input>
-  </ion-item>-->
+  <br/>
+  <div class="ion-text-center">
+  <strong><h1>Faça seu login</h1></strong>
+</div>
+  <div class="ion-text-center" style="background-image:url(https://image.freepik.com/fotos-gratis/mulher-de-negocios-com-longos-cabelos-castanhos-em-roupas-casuais-segurando-muitas-notas-sobre-o-branco_231208-6417.jpg)">
+   
   
-  
-  <div>
+  <div class="ion-text-center">
     <br />
-    <p>Usuário</p>
-    <input type="text" name="" placeholder="Insira seu nome de usuário"/>
-    <p>Senha</p>
-    <input type="password" name="" placeholder="Insira sua senha"/>
-    <br />
-    <input type="checkbox" checked="checked" name="remember"> Continuar conectado
-  
+      <ion-item>
+      <strong><ion-label class="label">Email:</ion-label></strong>
+      <ion-input [(ngModel)]="LoginEmail" type="String"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <strong><ion-label class="label">Senha:</ion-label></strong>
+      <ion-input [(ngModel)]="LoginSenha" type="password"></ion-input>
+    </ion-item> 
   
       <br />
      
@@ -46,17 +39,18 @@
 
     <div class="ion-text-center">
       <br/>
-      <ion-button routerLink="/devedores">Login</ion-button>    
+      
+      <ion-button routerLink="/devedores" class="login" (click)="login()">Login</ion-button>  
+    
     </div>
-    <br/><br/>
+    <br/><br/><br /><br /><br />
 
    <a><strong>Ainda não é cadastrado?</strong></a>
-    <br/>
+    <br/><br />
+    
     <ion-button routerLink="/cadusuario">Cadastre-se</ion-button>  
   </div>
-
-
-  
+ 
 </ion-content>
 <br/>
 

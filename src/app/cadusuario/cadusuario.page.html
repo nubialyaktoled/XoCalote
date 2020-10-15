@@ -23,17 +23,17 @@
      
       <ion-item>
         <strong><ion-label position="floating">Nome:</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="cadUserName" type="String"></ion-input>
       </ion-item>
 
       <ion-item>
         <strong><ion-label position="floating" >Email:</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="cadUserEmail" type="String"></ion-input>
       </ion-item>
 
       <ion-item>
         <strong><ion-label position="floating" type="password">Senha:</ion-label></strong>
-        <ion-input type="password"></ion-input>
+        <ion-input [(ngModel)]="cadUserSenha" type="password"></ion-input>
       </ion-item>
 
      
@@ -41,7 +41,7 @@
 
     <div class="ion-text-center">
       <br/>
-      <ion-button routerLink="/login">Concluir cadastro</ion-button>    
+      <ion-button routerLink="/login" (click)="userCad()">Concluir cadastro</ion-button>    
     </div>
     <br/><br/><br/>
  </ion-text>

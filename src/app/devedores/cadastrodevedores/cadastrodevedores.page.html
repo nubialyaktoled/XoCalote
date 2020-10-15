@@ -23,54 +23,56 @@
      
       <ion-item>
         <strong><ion-label position="floating">Nome:</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="DevNome" type="String"></ion-input>
       </ion-item>
 
       <ion-item>
         <strong><ion-label position="floating">Telefone:</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="DevTel" type="String"></ion-input>
       </ion-item>
 
       <ion-item>
         <strong><ion-label position="floating">Endereço:</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="DevEndereco" type="String"></ion-input>
       </ion-item>
 
       <ion-item>
         <strong><ion-label position="floating">Motivo da dívida: (venda, emprestimo de dinheiro..)</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="DevReason" type="String"></ion-input>
       </ion-item>
 
       <ion-item>
         <strong><ion-label position="floating">Data da dívida:</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="DevDateDi" type="String"></ion-input>
       </ion-item>
 
       <ion-item>
         <strong> <ion-label position="floating">Valor da dívida:</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="DevValor" type="String"></ion-input>
       </ion-item>    
 
       <ion-item>
         <strong> <ion-label position="floating">Primeira data prometida para pagamento:</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="DevDataP" type="String"></ion-input>
       </ion-item>
 
       <ion-item>
         <strong><ion-label position="floating">Desculpas dadas pelo devedor até o momento:</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="DevDesc" type="String"></ion-input>
       </ion-item>
 
       <ion-item>
         <strong> <ion-label position="floating">Digite demais informações importantes:</ion-label></strong>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="DevOthers" type="String"></ion-input>
       </ion-item>
       
     </div>
 
+    
+
     <div class="ion-text-center">
       <br/>
-      <ion-button routerLink="/devedores">Cadastrar devedor</ion-button>    
+      <ion-button class="cadastro" (click)="devedorCad()">Cadastrar devedor</ion-button>  
     </div>
     <br/><br/><br/>
  </ion-text>

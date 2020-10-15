@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController, NavParams } from '@ionic/angular';
+import { CadastrodevedoresPage } from './cadastrodevedores/cadastrodevedores.page';
 
 @Component({
   selector: 'app-devedores',
@@ -7,14 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DevedoresPage implements OnInit {
 
-  date: string;
-  type: 'string';
-  constructor() { }
+  public DevNome: string;
+
+
+  constructor()
+  {}
 
   ngOnInit() {
   }
-   onChange($event) {
-    console.log($event);
+
+  getinf(){
+    return this.DevNome;
   }
+
 
 }
