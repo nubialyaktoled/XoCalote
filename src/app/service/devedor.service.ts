@@ -13,6 +13,8 @@ export type Devedor = {
   DevOthers: string
 }
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,6 +24,14 @@ export class DevedorService {
 
   constructor(private storage: Storage) {
     this.storage.get("devedor").then(e => this.devedores = e || []);
+  }
+
+  public all() {
+    return this.devedores;
+  }
+
+  public get(DevNome: string) {
+    return this.devedores.find(d => d.DevNome === DevNome);
   }
 
   public create(devedor: Devedor){

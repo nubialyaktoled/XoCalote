@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { Devedor, DevedorService } from './../../service/devedor.service';
+import { DevedoresDetailsComponent } from './devedores-details/devedores-details.component';
 
 @Component({
   selector: 'app-dados',
@@ -7,7 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DadosPage implements OnInit {
 
-  constructor() { }
+  public devedor: Devedor[] = this.devedorService.all();
+
+  constructor(
+    private modalController: ModalController,
+    private devedorService: DevedorService) {
+  }
+
+  async showDetails(devedor: Devedor) {
+    const modal = await this.modalController.create({
+      component: DevedoresDetailsComponent,
+      componentProps: {
+        devedor
+      }
+    });
+
+    await modal.present();
+  }
 
   ngOnInit() {
   }
