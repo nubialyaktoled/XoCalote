@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { CadusuarioPage } from './cadusuario.page';
 
 const routes: Routes = [
