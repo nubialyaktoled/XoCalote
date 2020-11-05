@@ -17,10 +17,18 @@
 <ion-list>
 <ion-item *ngFor="let d of devedor">
 	<ion-label>
-	  <h2>Nome: {{d.DevNome}}</h2>
-	  <h2>Telefone: {{d.DevTel}}</h2>
-	</ion-label>
+	 <h2><strong>{{d.DevNome}}</strong></h2> 
+	  <h4><strong>Telefone:</strong> {{d.DevTel}}</h4>
+	  <h4><strong>Endereço: </strong> {{d.DevEndereco}}</h4>
+	  <h4><strong>Valor da dívida: </strong>{{d.DevValor}}</h4>
+	  <h4><strong>Motivo da dívida: </strong>{{d.DevReason}}</h4>
+	  <h4><strong>Data da dívida: </strong> {{d.DevDateDi}}</h4>
+	  <h4><strong>Data de pagamento da dívida: </strong> {{d.DevDataP}}</h4>
+	  <h4><strong>Desculpa: </strong> {{d.DevDesc}}</h4>
+	  <h4><strong>Outros dados: </strong> {{d.DevOthers}}</h4>
+	  </ion-label>
 </ion-item>
+
 </ion-list>
 
 
