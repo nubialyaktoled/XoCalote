@@ -8,12 +8,15 @@ import { CadastrodevedoresPageRoutingModule } from './cadastrodevedores-routing.
 
 import { CadastrodevedoresPage } from './cadastrodevedores.page';
 
+import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CadastrodevedoresPageRoutingModule
+    CadastrodevedoresPageRoutingModule,
+    IonicStorageModule.forRoot()
   ],
   declarations: [CadastrodevedoresPage]
 })

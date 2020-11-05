@@ -1,5 +1,7 @@
 {
   "name": "XoCalote",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

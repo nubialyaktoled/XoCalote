@@ -1,6 +1,6 @@
 import { DevedoresPage } from './../devedores.page';
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from '@ionic/angular';
+import { DevedorService } from 'src/app/service/devedor.service';
 
 @Component({
   selector: 'app-cadastrodevedores',
@@ -19,20 +19,25 @@ public DevDesc: string;
 public DevOthers: string;
   navCtrl: any;
 
+
+  constructor(private devedorService: DevedorService){}
+
   ngOnInit() {
   }
 
   devedorCad(){
-console.log('Nome', this.DevNome);
-console.log('Telefone', this.DevTel);
-console.log('End', this.DevEndereco);
-console.log('Motivodivida', this.DevReason);
-console.log('DataDivida', this.DevDateDi);
-console.log('Valor', this.DevValor);
-console.log('Datapagamento', this.DevDataP);
-console.log('DesculpaDevedor', this.DevDesc);
-console.log('Outras', this.DevOthers)
-  }
+    this.devedorService.create({
+      DevNome: this.DevNome,
+      DevTel: this.DevTel,
+      DevEndereco: this.DevEndereco,
+      DevReason: this.DevReason,
+      DevDateDi: this.DevDateDi,
+      DevValor: this.DevValor,
+      DevDataP: this.DevDataP,
+      DevDesc: this.DevDesc,
+      DevOthers: this.DevOthers
+    })
+ }
 
   getdevedores(){
     return this.devedorCad();
