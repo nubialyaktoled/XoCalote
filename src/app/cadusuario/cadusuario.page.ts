@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/service/usuario.service';
 
 @Component({
   selector: 'app-cadusuario',
@@ -10,15 +11,22 @@ export class CadusuarioPage implements OnInit {
   public cadUserName: string;
   public cadUserEmail: string;
   public cadUserSenha: string;
+  navCtrl: any;
 
-  constructor() { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
   }
 
   userCad(){
-    console.log('Name', this.cadUserName);
-    console.log('Email', this.cadUserEmail);
-    console.log('Senha', this.cadUserSenha)
+    this.usuarioService.create({
+      cadUserName: this.cadUserName,
+      cadUserEmail: this.cadUserEmail,
+      cadUserSenha: this.cadUserSenha
+    })
+      }
+
+    getusuarios(){
+        return this.userCad();
       }
 }
