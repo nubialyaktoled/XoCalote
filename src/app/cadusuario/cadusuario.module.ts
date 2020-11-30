@@ -8,12 +8,15 @@ import { CadusuarioPageRoutingModule } from './cadusuario-routing.module';
 
 import { CadusuarioPage } from './cadusuario.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CadusuarioPageRoutingModule
+    CadusuarioPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [CadusuarioPage]
 })

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/service/usuario.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadusuario',
@@ -8,25 +9,21 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 })
 export class CadusuarioPage implements OnInit {
 
-  public cadUserName: string;
-  public cadUserEmail: string;
-  public cadUserSenha: string;
-  navCtrl: any;
+  public formLogin: FormGroup;
 
-  constructor(private usuarioService: UsuarioService) { }
+	constructor(
+		private formBuilder: FormBuilder
+	) {
 
+    this.formLogin = this.formBuilder.group({
+      'nome' : [null, Validators.required],
+			'email': [null, Validators.compose([Validators.required,Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$')])],
+			'password': [null, Validators.compose([Validators.required, Validators.minLength(6)])]
+		});
+
+	}
   ngOnInit() {
   }
 
-  userCad(){
-    this.usuarioService.create({
-      cadUserName: this.cadUserName,
-      cadUserEmail: this.cadUserEmail,
-      cadUserSenha: this.cadUserSenha
-    })
-      }
-
-    getusuarios(){
-        return this.userCad();
-      }
+ 
 }
