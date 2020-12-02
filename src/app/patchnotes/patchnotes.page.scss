@@ -1,0 +1,24 @@
+.patchnotes__container {
+    background: #e2e1e0;
+    padding: .5rem;
+
+    .patchnotes__item {
+        border-radius: .25rem;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        padding: .5rem;
+
+        &:not(:last-child) {
+            margin: 0 auto 1.5rem auto;
+        }
+
+        h2 {
+            margin-top: 6px;
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+    }
+} 

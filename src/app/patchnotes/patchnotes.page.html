@@ -2,8 +2,8 @@
   <div class="patchnotes__container">
     <div class="patchnotes__item" *ngFor="let commit of commits">
       <h2>{{commit.commit.message}}</h2> 
-      <h3>{{commit.commit.author.date}}</h3>
-      <span>{{commit.commit.author.name}}</span>
+      <h3>Made in: {{commit.commit.author.date}}</h3>
+      <span>Author: {{commit.commit.author.name}}</span>
     </div>
   </div>
 </ion-content>
