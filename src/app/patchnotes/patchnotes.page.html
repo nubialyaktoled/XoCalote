@@ -1,0 +1,7 @@
+<ion-content>
+  <div class="patchnotes__container">
+    <div class="patchnotes__item" *ngFor="let commit of commits">
+      {{commit.commit.author.name}}
+    </div>
+  </div>
+</ion-content>

@@ -27,7 +27,11 @@ const routes: Routes = [
   {
     path: 'cadastrodevedores',
     loadChildren: () => import('./devedores/cadastrodevedores/cadastrodevedores.module').then(m => m.CadastrodevedoresPageModule)
+  },  {
+    path: 'patchnotes',
+    loadChildren: () => import('./patchnotes/patchnotes.module').then( m => m.PatchnotesPageModule)
   }
+
 ];
 
 @NgModule({
