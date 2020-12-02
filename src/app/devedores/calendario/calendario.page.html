@@ -1,11 +1,43 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>calendario</ion-title>
-  </ion-toolbar>
+  <ion-toolbar color="primary">
+		<br/>
+		<ion-title>
+			<strong>{{viewTitle}}</strong>
+		</ion-title>
+		<br/>
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="devedores"></ion-back-button>
+		</ion-buttons>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
   
+  <ion-card>
+    <ion-card-header tappable (click)="collapseCard = !collapseCard">
+      <ion-card-title>Novo Evento</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content *ngIf="!collapseCard">
+      
+      <ion-item>
+        <ion-input type="text" placeholder="Título" [(ngModel)]="event.title"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Inicio</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.startTime" [min]="minDate"></ion-datetime>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Fim</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.endTime" [min]="minDate"></ion-datetime>
+      </ion-item>
+  
+      <ion-button fill="outline" expand="block" (click)="addEvent()" [disabled]="event.title == ''">Adicionar Evento</ion-button>
+    </ion-card-content>
+  </ion-card>
+
   <calendar [eventSource]="eventSource"
   [calendarMode]="calendar.mode"
   [currentDate]="calendar.currentDate"
@@ -15,6 +47,5 @@
   (onTitleChanged)="onViewTitleChanged($event)"
   (onTimeSelected)="onTimeSelected($event)"
   step="30">
-  </calendar>
-
+  </calendar> 
 </ion-content>
