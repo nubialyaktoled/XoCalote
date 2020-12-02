@@ -27,7 +27,7 @@
             <ion-icon name="pencil" item-start></ion-icon>
             Nome
           </ion-label></strong>
-          <ion-input type="text" formControlName="nome"></ion-input>
+          <ion-input placeholder="Nome"type="text" formControlName="nome"></ion-input>
         </ion-item>
         <div *ngIf="formLogin.controls.nome.errors" class="px-3 text-danger">
           <p *ngIf="formLogin.controls.nome.errors.required"><small>Campo obrigatório</small></p>
@@ -39,7 +39,7 @@
             <ion-icon name="mail" item-start></ion-icon>
             E-mail
           </ion-label></strong>
-          <ion-input type="text" formControlName="email"></ion-input>
+          <ion-input placeholder="Email" type="text" formControlName="email"></ion-input>
         </ion-item>
         <div *ngIf="formLogin.controls.email.errors" class="px-3 text-danger">
           <p *ngIf="formLogin.controls.email.errors.required"><small>Campo obrigatório</small></p>
@@ -51,10 +51,10 @@
             <ion-icon name="key-outline" item-start></ion-icon>
             Senha
           </ion-label></strong>
-          <ion-input type="password" formControlName="password"></ion-input>
+          <ion-input placeholder="Digite sua senha" type="password" formControlName="password"></ion-input>
         </ion-item>
         <div *ngIf="formLogin.controls.email.errors" class="px-3 text-danger">
-          <p *ngIf="formLogin.controls.password.errors.required"><small>Campo obrigatório</small></p>
+          <p *ngIf="formLogin.controls.password.errors.required"><small>Crie uma senha com pelo menos 6 caracteres</small></p>
         </div>
 
         <ion-button routerLink="/login" type="submit" [disabled]="!formLogin.valid">Concluir cadastro</ion-button>
