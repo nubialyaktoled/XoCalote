@@ -27,9 +27,14 @@ const routes: Routes = [
   {
     path: 'cadastrodevedores',
     loadChildren: () => import('./devedores/cadastrodevedores/cadastrodevedores.module').then(m => m.CadastrodevedoresPageModule)
-  },  {
+  },
+  {
     path: 'patchnotes',
     loadChildren: () => import('./patchnotes/patchnotes.module').then( m => m.PatchnotesPageModule)
+  },
+  {
+    path: 'calendario',
+    loadChildren: () => import('./devedores/calendario/calendario.module').then( m => m.CalendarioPageModule)
   }
 
 ];

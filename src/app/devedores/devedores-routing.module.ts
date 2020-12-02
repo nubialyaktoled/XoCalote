@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DevedoresPage } from './devedores.page';
 
+
+
+
 const routes: Routes = [
   {
     path: '',
@@ -23,6 +26,10 @@ const routes: Routes = [
   {
     path: 'dados',
     loadChildren: () => import('./dados/dados.module').then( m => m.DadosPageModule)
+  },
+  {
+    path: 'calendario',
+    loadChildren: () => import('./calendario/calendario.page').then( m => m.CalendarioPage)
   }
 ];
 
