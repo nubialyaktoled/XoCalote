@@ -26,7 +26,10 @@
 	  <h4><strong>Data de pagamento da dívida: </strong> {{d.DevDataP}}</h4>
 	  <h4><strong>Desculpa: </strong> {{d.DevDesc}}</h4>
 	  <h4><strong>Outros dados: </strong> {{d.DevOthers}}</h4>
-	  </ion-label>
+	  <div class="dados-icone">
+	  	<ion-icon name="trash" (click)="deleteDevedor(d.DevNome)"></ion-icon>
+	  </div>
+	</ion-label>
 </ion-item>
 
 </ion-list>

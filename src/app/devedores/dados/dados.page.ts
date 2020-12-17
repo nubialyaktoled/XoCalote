@@ -31,4 +31,8 @@ export class DadosPage implements OnInit {
   ngOnInit() {
   }
 
+  async deleteDevedor(devNome: string) {
+    this.devedorService.delete(devNome)
+  }
+
 }

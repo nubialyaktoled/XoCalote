@@ -38,4 +38,9 @@ export class DevedorService {
     this.devedores.push(devedor);
     this.storage.set("devedor", this.devedores);
   }
+
+  public delete(devedorNome: string) {
+    this.devedores.splice(this.devedores.findIndex(e => e.DevNome === devedorNome), 1)
+    this.storage.set('devedor', this.devedores)
+  }
 }
