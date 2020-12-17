@@ -17,6 +17,17 @@ export class DadosPage implements OnInit {
     private devedorService: DevedorService) {
   }
 
+  ngOnInit() {
+  }
+
+  deleteDevedor(devNome: string) {
+    this.devedorService.delete(devNome)
+  }
+
+  updateDevedor(devedor: Devedor) {
+    this.showDetails(devedor);
+  }
+
   async showDetails(devedor: Devedor) {
     const modal = await this.modalController.create({
       component: DevedoresDetailsComponent,
@@ -27,12 +38,4 @@ export class DadosPage implements OnInit {
 
     await modal.present();
   }
-
-  ngOnInit() {
-  }
-
-  async deleteDevedor(devNome: string) {
-    this.devedorService.delete(devNome)
-  }
-
 }

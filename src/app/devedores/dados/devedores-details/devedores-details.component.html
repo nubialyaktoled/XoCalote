@@ -1,5 +1,54 @@
-<p>
-  devedores-details works!
-</p>
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+</ion-header>
 
-<h1>nome = {{devedor.DevNome}}</h1>
+<ion-content>
+  <ion-list>
+    <ion-label>
+      <h2>
+        <strong>{{ devedor.DevNome }}</strong>
+      </h2>
+      <h4>
+        <strong>Telefone:</strong>
+        <ion-input [value]="devedor.DevTel" (ionChange)="updateField('DevTel', $event)"></ion-input>
+      </h4>
+      <h4>
+        <strong>Endereço: </strong>
+        <ion-input [value]="devedor.DevEndereco" (ionChange)="updateField('DevEndereco', $event)"></ion-input>
+      </h4>
+      <h4>
+        <strong>Valor da dívida: </strong>
+        <ion-input [value]="devedor.DevValor" (ionChange)="updateField('DevValor', $event)"></ion-input>
+      </h4>
+      <h4>
+        <strong>Motivo da dívida: </strong>
+        <ion-input [value]="devedor.DevReason" (ionChange)="updateField('DevReason', $event)"></ion-input>
+      </h4>
+      <h4>
+        <strong>Data da dívida: </strong>
+        <ion-input [value]="devedor.DevDateDi" (ionChange)="updateField('DevDateDi', $event)"></ion-input>
+      </h4>
+      <h4>
+        <strong>Data de pagamento da dívida: </strong>
+        <ion-input [value]="devedor.DevDataP" (ionChange)="updateField('DevDataP', $event)"></ion-input>
+      </h4>
+      <h4>
+        <strong>Desculpa: </strong>
+        <ion-input [value]="devedor.DevDesc" (ionChange)="updateField('DevDesc', $event)"></ion-input>
+      </h4>
+      <h4>
+        <strong>Outros dados: </strong>
+        <ion-input [value]="devedor.DevOthers" (ionChange)="updateField('DevOthers', $event)"></ion-input>
+      </h4>
+    </ion-label>
+
+    <ion-button (click)="save()" expand="block" fill="clear" shape="round">
+      Salvar
+    </ion-button>
+    <ion-button (click)="close()" expand="block" fill="clear" shape="round">
+      Cancelar
+    </ion-button>
+  </ion-list>
+</ion-content>

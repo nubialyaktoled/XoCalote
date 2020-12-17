@@ -43,4 +43,15 @@ export class DevedorService {
     this.devedores.splice(this.devedores.findIndex(e => e.DevNome === devedorNome), 1)
     this.storage.set('devedor', this.devedores)
   }
+
+  public update(devedor: Devedor) {
+    this.devedores = [
+      ...this.devedores.filter(devedor_ => devedor_.DevNome !== devedor.DevNome),
+      devedor
+    ];
+
+    console.log(this.devedores);
+    
+    this.storage.set('devedor', this.devedores);
+  }
 }

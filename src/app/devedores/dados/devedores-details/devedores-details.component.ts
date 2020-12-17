@@ -11,13 +11,24 @@ export class DevedoresDetailsComponent implements OnInit {
 
   @Input() devedor: Devedor;
 
-  constructor(private modalController: ModalController) {
-   }
+
+  constructor(private modalController: ModalController, private devedorService: DevedorService) {}
 
   ngOnInit() {}
 
-  public close() {
-    this.modalController.dismiss();
+  public save() {
+    this.devedorService.update(this.devedor);
+
+    this.close();
   }
 
+  public updateField(fieldName: string, event: any) {
+    this.devedor[fieldName] = event.target.value;
+  }
+
+  public close() {
+    this.modalController.dismiss({
+      'dismissed': true
+    });
+  }
 }

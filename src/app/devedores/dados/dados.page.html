@@ -27,7 +27,8 @@
 	  <h4><strong>Desculpa: </strong> {{d.DevDesc}}</h4>
 	  <h4><strong>Outros dados: </strong> {{d.DevOthers}}</h4>
 	  <div class="dados-icone">
-	  	<ion-icon name="trash" (click)="deleteDevedor(d.DevNome)"></ion-icon>
+		  <ion-icon name="trash" (click)="deleteDevedor(d.DevNome)"></ion-icon>
+		  <ion-icon name="pencil-outline" (click)="updateDevedor(d)"></ion-icon>
 	  </div>
 	</ion-label>
 </ion-item>
@@ -37,8 +38,3 @@
 
 
 </ion-content>
-
-
-
-
-  
